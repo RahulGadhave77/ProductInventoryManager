@@ -19,6 +19,7 @@ public class App {
 		System.out.println("2. get all product List ");
 		System.out.println("3. update product quantity ");
 		System.out.println("4. delete product ");
+		System.out.println("5. enter for cheng manufacer");
 
 		Scanner sc = new Scanner(System.in);
 		int opration = sc.nextInt();
@@ -38,7 +39,9 @@ public class App {
 		case 4:
 			p.deleteProduct();
 			break;
-
+		case 5:
+			p.getchenge();
+			break;
 		default:
 			System.out.println("choose right option ");
 			break;
