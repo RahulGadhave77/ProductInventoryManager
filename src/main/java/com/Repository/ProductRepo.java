@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import com.Entity.InventoryDetail;
 import com.Entity.ProductDetail;
 import com.Utility.ProductUtility;
 
@@ -17,10 +18,6 @@ public class ProductRepo {
 	public void addProduct() {
 
 		ProductDetail product = new ProductDetail();
-
-		System.out.println("Enter the Id ");
-		int productId = sc.nextInt();
-		product.setProductId(productId);
 
 		System.out.println("Enter Product Name");
 		String productName = sc.next();
@@ -38,6 +35,18 @@ public class ProductRepo {
 		String productManufacture = sc.next();
 		product.setManufacturer(productManufacture);
 
+		InventoryDetail invontory = new InventoryDetail();
+
+		System.out.println("enter product location");
+		String location = sc.next();
+		invontory.setWarehouseLocation(location);
+
+		// set intory in product
+		product.setInventoryDetail(invontory);
+
+		// set produc in inventory
+		invontory.setProductDetail(product);
+
 		SessionFactory factory = ProductUtility.getfactory();
 		Session session = factory.openSession();
 		Transaction transaction = session.beginTransaction();
@@ -46,6 +55,8 @@ public class ProductRepo {
 
 		transaction.commit();
 		session.close();
+
+		System.out.println("Product & Inventory Saved Successfully");
 
 	}
 
@@ -77,6 +88,10 @@ public class ProductRepo {
 		System.out.println("Enter Product Quantity");
 		int productQuantity = sc.nextInt();
 		product.setProductQuatity(productQuantity);
+
+		System.out.println("Enter wherehouse location");
+		String location = sc.next();
+		product.getInventoryDetail().setWarehouseLocation(location);
 
 		transaction.commit();
 		session.close();

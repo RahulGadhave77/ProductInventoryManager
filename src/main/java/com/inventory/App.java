@@ -15,7 +15,7 @@ public class App {
 
 		System.out.println("==welcome==");
 		System.out.println("Enter the following option");
-		System.out.println("1.Add a Product ");
+		System.out.println("1.Add a Product and location");
 		System.out.println("2. get all product List ");
 		System.out.println("3. update product quantity ");
 		System.out.println("4. delete product ");
