@@ -75,7 +75,7 @@ public class ProductRepo {
 		session.close();
 
 	}
-
+//update product 
 	public void updateProduct() {
 		SessionFactory factory = ProductUtility.getfactory();
 		Session session = factory.openSession();
