@@ -59,7 +59,7 @@ public class ProductRepo {
 		System.out.println("Product & Inventory Saved Successfully");
 
 	}
-
+//get all data from database
 	public void getAllProduct() {
 
 		SessionFactory factory = ProductUtility.getfactory();
