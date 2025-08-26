@@ -14,7 +14,7 @@ import com.Utility.ProductUtility;
 public class ProductRepo {
 
 	Scanner sc = new Scanner(System.in);
-//post product
+
 	public void addProduct() {
 
 		ProductDetail product = new ProductDetail();
@@ -96,7 +96,7 @@ public class ProductRepo {
 		transaction.commit();
 		session.close();
 	}
-
+//delete from product
 	public void deleteProduct() {
 		SessionFactory factory = ProductUtility.getfactory();
 		Session session = factory.openSession();
