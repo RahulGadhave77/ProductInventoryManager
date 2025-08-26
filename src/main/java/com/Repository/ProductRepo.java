@@ -14,7 +14,6 @@ import com.Utility.ProductUtility;
 public class ProductRepo {
 
 	Scanner sc = new Scanner(System.in);
-	//post the product
 
 	public void addProduct() {
 
