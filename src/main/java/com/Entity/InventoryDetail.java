@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "inventory_Detail")
 public class InventoryDetail {
-
+//
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int inventoryId;
