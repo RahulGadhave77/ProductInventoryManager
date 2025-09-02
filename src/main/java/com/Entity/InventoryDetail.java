@@ -7,7 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
-
+// add some
 @Entity
 @Table(name = "inventory_Detail")
 public class InventoryDetail {
